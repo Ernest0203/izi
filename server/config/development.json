@@ -1,0 +1,22 @@
+{
+  "server": {
+    "host": "127.0.0.1",
+    "port": 2000,
+    "baseURL": "",
+    "tempPath": "~/temp/"
+  },
+  "db": {
+    "postgres": {
+      "uri": "postgres://ywlsjdze:Kw-X-eZaE7oRgBokPoyc2QpDE_DeyUBY@lallah.db.elephantsql.com:5432/ywlsjdze",
+      "options": {}
+    },
+    "redis": {
+      "uri": "",
+      "options": {},
+      "password": ""
+    },
+    "mongo": {
+      "uri": "mongodb://ernest2332:nballstar0203@ds361085.mlab.com:61085/filter"
+    }
+  }
+}

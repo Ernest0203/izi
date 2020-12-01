@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/runserver.js",
+    "dev": "cross-env NODE_ENV=development nodemon src/runserver.js",
+    "migrate": "sequelize db:migrate",
+    "migrate:rollback": "sequelize db:migrate:undo",
+    "migrate:rollback:all": "sequelize db:migrate:undo:all",
+    "migration:generate": "npx sequelize-cli migration:generate --name=default"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.0.1",
+    "cors": "^2.8.5",
+    "cross-env": "^6.0.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.17",
+    "nodemon": "^1.18.10",
+    "pg": "^8.3.0",
+    "sequelize": "^6.3.4",
+    "sequelize-cli": "^6.2.0"
+  },
+  "devDependencies": {
+    "esm": "^3.2.25"
+  }
+}
