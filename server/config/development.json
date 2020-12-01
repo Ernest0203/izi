@@ -7,7 +7,7 @@
   },
   "db": {
     "postgres": {
-      "uri": "postgres://ywlsjdze:Kw-X-eZaE7oRgBokPoyc2QpDE_DeyUBY@lallah.db.elephantsql.com:5432/ywlsjdze",
+      "uri": "postgres://evmlufhv:eWzDvM1CsnsfLG393IoUyzcgkOziaF1k@balarama.db.elephantsql.com:5432/evmlufhv",
       "options": {}
     },
     "redis": {

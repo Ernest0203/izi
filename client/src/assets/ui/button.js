@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Button = ({ text, active, onClick }) => {
+const Button = ({ text, active }) => {
   return (
     <ButtonWrapper>
-      <div className={`button ${active ? 'buttonActive' : ''}`} onClick={onClick}>{text}</div>
+      <div className={`button ${active ? 'buttonActive' : ''}`}>{text}</div>
     </ButtonWrapper>     
   )
 }

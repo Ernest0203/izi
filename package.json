@@ -10,10 +10,6 @@
     "client": "npm run start --prefix client",
     "dev": "concurrently --kill-others \"npm run server\" \"npm run client\"",
     "start": "npm run start --prefix server",
-    "migrate": "npm run migrate --prefix server",
-    "migrate:rollback": "npm run migrate:rollback --prefix server",
-    "migrate:rollback:all": "npm run migrate:rollback:all --prefix server",
-    "migration:generate": "npm run migration:generate --prefix server",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix server && npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
@@ -23,7 +19,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^5.1.0",
-    "flow-bin": "^0.132.0"
+    "concurrently": "^5.1.0"
   }
 }

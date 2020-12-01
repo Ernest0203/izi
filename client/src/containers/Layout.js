@@ -3,48 +3,28 @@ import { Switch, Route, NavLink } from "react-router-dom";
 import styled from 'styled-components';
 
 const routes = [
-  {
-    link: 'streams',
-    path: 'streams',
-    component: lazy(() => import('./Streams'))
-	},
-	// {
-  //  link: 'types',
-  //  path: 'types',
-	// 	component: lazy(() => import('./Types')),
-	// 	props: { string: 'test', number: 5 }
-	// },
-	{
-   link: 'typescript',
-   path: 'typescript',
-	 component: lazy(() => import('./Typescript')),
-	 props: { string: 'test', number: 5 }
-	},
-	{
-		link: 'chart',
-		path: 'chart',
-		component: lazy(() => import('./Chart')),
-	 },
+  // {
+	// 	exact: true,
+  //   link: 'component',
+  //   path: 'component',
+  //   component: lazy(() => import('./Component'))
+  // },
 ];
 
 const Layout = () => {
-	const linksList = routes.map((route, index) => {
-		return <NavLink key={index} to={`/${route.link}`} activeClassName='linkActive'>{route.link}</NavLink>
-	});
-	const routesList = routes.map((route, index) => {
-		return <Route key={index} path={`/${route.path}`} component={() => <route.component {...route.props}/>} ></Route> 
-		}
-	);
+	// const linksList = routes.map((route, index) => {
+	// 	return <NavLink key={index} to={`/${route.link}`} activeClassName='linkActive'>{route.link}</NavLink>
+	// });
+	// const routesList = routes.map((route, index) => {
+	// 	return <Route key={index} path={`/${route.path}`} exact={route.exact} component={route.component}></Route> 
+	// 	}
+	// );
 
   return (
     <LayoutWrapper>
-			<nav>
-				{linksList}
-			</nav>
 			<div className="mainContent">
 				<Suspense fallback={() => <p>Loading...</p>}>
 					<Switch>
-						{routesList}
 					</Switch>
 				</Suspense>
 			</div>

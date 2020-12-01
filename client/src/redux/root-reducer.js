@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import streams from './streams/reducer';
+import files from './files/reducer';
 
 export default combineReducers({
-  streams,
+  files,
 });

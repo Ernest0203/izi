@@ -1,14 +1,15 @@
 const config = require('config');
 const mongoose = require('mongoose');
-const postgres = require('../src/db/postgres/postgres');
 
 const server = require('./server');
 
 const mongoUri = config.get('db.mongo.uri');
-Promise.all([
-  //mongoose.connect(mongoUri).then(() => console.info('MongoDB connected...')),
-  postgres.authenticate().then(() => console.info('Postgres connected...'))
-]).catch(err => console.info(err));
+mongoose.connect(mongoUri)
+  .then(() => console.info('MongoDB connected...'))
+  .catch(err => console.info(err));
+
+//postgres.authenticate().
+//  then(() => console.info('Postgres connected'));
 
 console.info('NODE_ENV', process.env.NODE_ENV);
 const HOST = config.get('server.host');

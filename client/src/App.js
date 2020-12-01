@@ -13,7 +13,7 @@ function App() {
         <Router>
           <AppWrapper>
             <header className="appHeader">
-              <h1>Express - Cra - Polygon</h1>
+              <h1>Express - Cra</h1>
             </header>
             <main className="appMain">
               <Layout/>

@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Input = ({ value, type, placeholder, onChange }) => {
+const Input = ({ value, type, placeholder }) => {
   return (
     <InputWrapper>
-      <input type={type} placeholder={placeholder} onChange={e => onChange(e.target.value)}/>
+      <input type={type} placeholder={placeholder}/>
     </InputWrapper>     
   )
 }
@@ -20,10 +20,6 @@ const InputWrapper = styled.div`
     padding: 6px 10px;
     margin-bottom: 10px;
     width: 100%;
-    &:focus {
-      border-color: #828684;
-      outline: none;
-    }
   }
 `
 

@@ -1,16 +1,16 @@
 import actions from './actions';
 
 const initialState = {
-  data: ''
+  filesUrls: []
 };
 
-export default function streams(state = initialState, action) {
+export default function files(state = initialState, action) {
   const { type, data } = action;
   switch (type) {
     case actions.FETCH_DATA_SUCCESS:
       return {
         ...state,
-        data: data
+        filesUrls: [...data]
       };
 
     default:

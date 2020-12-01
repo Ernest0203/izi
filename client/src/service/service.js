@@ -1,12 +1,12 @@
 import Api from './api';
 
 export default {
-  writeStream: data => {
+  filesUpload: data => {
     const api = new Api();
-    return api.query('post', `streams`, data);
+    return api.query('post', `files`, data);
   },
-  readStream: () => {
+  getFiles: () => {
     const api = new Api();
-    return api.query('get', `streams`);
+    return api.query('get', `files/`);
   },
 };
