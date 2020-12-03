@@ -12,7 +12,7 @@ console.info('NODE_ENV', process.env.NODE_ENV);
 const HOST = config.get('server.host');
 const PORT = config.get('server.port');
 
-const instance = server.listen(PORT, HOST);
+const instance = server.listen(PORT, '0.0.0.0');
 
 instance.on('listening', () => console.info('Available on:'/*, `${HOST}:${PORT}`*/));
 instance.on('error', (error) => console.error(error));
