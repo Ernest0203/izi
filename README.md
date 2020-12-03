@@ -20,6 +20,6 @@ heroku create
 git init
 heroku git:remote -a created-repo-name
 git add .
-git commit -m 'commit'
+git commit -am 'commit'
 git push heroku master
 ```
