@@ -1,9 +1,16 @@
 const express = require('express');
 const routes = require('./routes/index');
+const cors = require('cors');
+const path = require('path');
+
+const fileupload = require('express-fileupload');
 
 const app = express(); 
 
 app.use(express.json());
+app.use(cors());
+app.use(fileupload());
+app.use(express.static(path.join(__dirname, '../', 'resources/')));
 app.use(routes);
 
 if (process.env.NODE_ENV === 'production') {

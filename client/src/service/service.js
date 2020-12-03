@@ -1,12 +1,16 @@
 import Api from './api';
 
 export default {
-  filesUpload: data => {
+  getNotes: () => {
     const api = new Api();
-    return api.query('post', `files`, data);
+    return api.query('get', `notes`);
   },
-  getFiles: () => {
+  createNote: data => {
     const api = new Api();
-    return api.query('get', `files/`);
+    return api.query('post', `notes`, data);
+  },
+  removeNote: data => {
+    const api = new Api();
+    return api.query('delete', `notes`, { data: { _id: data } });
   },
 };

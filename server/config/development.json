@@ -7,7 +7,7 @@
   },
   "db": {
     "postgres": {
-      "uri": "postgres://evmlufhv:eWzDvM1CsnsfLG393IoUyzcgkOziaF1k@balarama.db.elephantsql.com:5432/evmlufhv",
+      "uri": "",
       "options": {}
     },
     "redis": {
@@ -16,7 +16,7 @@
       "password": ""
     },
     "mongo": {
-      "uri": "mongodb://ernest2332:nballstar0203@ds361085.mlab.com:61085/filter"
+      "uri": "mongodb://ernest2332:nballstar0203@ds123624.mlab.com:23624/notes"
     }
   }
 }

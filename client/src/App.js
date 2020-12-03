@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router } from 'react-router-dom';
 import store from './redux/store';
 import styled, { createGlobalStyle } from 'styled-components';
 import Layout from './containers/Layout';
@@ -10,23 +9,21 @@ function App() {
     <Fragment>
       <GlobalStyle />
       <Provider store={store}>
-        <Router>
-          <AppWrapper>
-            <header className="appHeader">
-              <h1>Express - Cra</h1>
-            </header>
-            <main className="appMain">
-              <Layout/>
-            </main>
-          </AppWrapper>
-        </Router>
+        <AppWrapper>
+          <header className="appHeader">
+            <h1>Notes</h1>
+          </header>
+          <main className="appMain">
+            <Layout/>
+          </main>
+        </AppWrapper>
       </Provider>
     </Fragment>
   );
 }
 
 const AppWrapper = styled.div`
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   box-shadow: 0 3px 10px rgba(0,0,0, .2);
   background-color: #fff;
@@ -42,6 +39,8 @@ const AppWrapper = styled.div`
 const GlobalStyle = createGlobalStyle`
  * {
    box-sizing: border-box;
+   padding: 0;
+   margin: 0;
  }
   body {
     background-color: #eee;

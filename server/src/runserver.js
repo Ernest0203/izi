@@ -8,9 +8,6 @@ mongoose.connect(mongoUri)
   .then(() => console.info('MongoDB connected...'))
   .catch(err => console.info(err));
 
-//postgres.authenticate().
-//  then(() => console.info('Postgres connected'));
-
 console.info('NODE_ENV', process.env.NODE_ENV);
 const HOST = config.get('server.host');
 const PORT = config.get('server.port');
