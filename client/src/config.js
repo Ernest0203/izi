@@ -1,6 +1,5 @@
 const dev = {
   apiUrl: 'http://localhost:2000/',
-  socketUrl: 'ws://localhost:2000/'
 }
 const prod = {
   apiUrl: 'http://localhost:2000/'
