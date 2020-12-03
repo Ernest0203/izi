@@ -4,13 +4,13 @@ const Notes = require('../db/mongo/models/notes');
 const HOST = config.get('server.host');
 const PORT = config.get('server.port');
 
-export async function getNotes(req, res) {
+module.exports.getNotes = async function(req, res) {
   await Notes.find().sort({ _id: -1 })
     .then(data => res.json(data))
     .catch(error => res.send(error))
 }
 
-export async function createNote(req, res) {
+module.exports.createNote =  async function(req, res) {
   const query = { ...req.body };
   if (!query.title || !!query.body) res.status(400).send('Please fill all fields');
   if (!req.files) {
@@ -33,7 +33,7 @@ export async function createNote(req, res) {
   }
 }
 
-export async function removeNote(req, res) {
+module.exports.removeNote = async function(req, res) {
   await Notes.findByIdAndRemove({ _id: req.body._id })
     .then(res => res.json(res))
     .catch(error => res.send(error))

@@ -40,6 +40,7 @@ const NoteWrapper = styled.div`
     }
     &Content {
       display: flex;
+      justify-content: space-between;
     }
     &Text {
       margin-right: 30px;
