@@ -17,4 +17,4 @@ const instance = server.listen(2000, '127.0.0.1');
 instance.on('listening', () => console.info('Available on:', `${HOST}:${PORT}`));
 instance.on('error', (error) => console.error(error));
 
-module.exports = instance;
+exports.default = instance;
