@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node /src/runserver.js",
+    "start": "node ./src/runserver.js",
     "dev": "cross-env NODE_ENV=development nodemon src/runserver.js"
   },
   "author": "",
